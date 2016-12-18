@@ -1,0 +1,6 @@
+framework module Pods_DB_Travel_Assistance {
+  umbrella header "Pods-DB Travel Assistance-umbrella.h"
+
+  export *
+  module * { export * }
+}
