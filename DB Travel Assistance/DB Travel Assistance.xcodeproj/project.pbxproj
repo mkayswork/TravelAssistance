@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B829B401E1EACCF0023D656 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B3F1E1EACCF0023D656 /* Inspectable.swift */; };
+		1B829B421E1EB2B10023D656 /* MyTravelStatusListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */; };
+		1B829B441E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */; };
+		1B829B461E1EB3360023D656 /* MyTravelStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B451E1EB3360023D656 /* MyTravelStatusTableViewCell.swift */; };
+		1B829B481E1EB4B60023D656 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B471E1EB4B60023D656 /* Constants.swift */; };
 		3F078D4E1E07056400FDE0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F078D4D1E07056400FDE0C9 /* AppDelegate.swift */; };
 		3F078D501E07056400FDE0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F078D4F1E07056400FDE0C9 /* ViewController.swift */; };
 		3F078D531E07056400FDE0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F078D511E07056400FDE0C9 /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B829B3F1E1EACCF0023D656 /* Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
+		1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusListViewController.swift; path = "DB Travel Assistance/MyTravelStatusListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusDetailsViewController.swift; path = "DB Travel Assistance/MyTravelStatusDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1B829B451E1EB3360023D656 /* MyTravelStatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusTableViewCell.swift; path = "DB Travel Assistance/MyTravelStatusTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		1B829B471E1EB4B60023D656 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F078D4A1E07056400FDE0C9 /* DB Travel Assistance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DB Travel Assistance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F078D4D1E07056400FDE0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F078D4F1E07056400FDE0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +108,8 @@
 				3F078D561E07056400FDE0C9 /* LaunchScreen.storyboard */,
 				3F078D591E07056400FDE0C9 /* Info.plist */,
 				3F8F0E651E071124005CE5C4 /* Ressources */,
+				1B829B3F1E1EACCF0023D656 /* Inspectable.swift */,
+				1B829B471E1EB4B60023D656 /* Constants.swift */,
 			);
 			path = "DB Travel Assistance";
 			sourceTree = "<group>";
@@ -105,6 +117,9 @@
 		3F89B53E1E070A6400108FD8 /* MyTravel */ = {
 			isa = PBXGroup;
 			children = (
+				1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */,
+				1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */,
+				1B829B451E1EB3360023D656 /* MyTravelStatusTableViewCell.swift */,
 			);
 			path = MyTravel;
 			sourceTree = "<group>";
@@ -286,7 +301,12 @@
 			files = (
 				3F078D501E07056400FDE0C9 /* ViewController.swift in Sources */,
 				3F89B5451E070AD000108FD8 /* IBInspectable.swift in Sources */,
+				1B829B401E1EACCF0023D656 /* Inspectable.swift in Sources */,
+				1B829B461E1EB3360023D656 /* MyTravelStatusTableViewCell.swift in Sources */,
+				1B829B421E1EB2B10023D656 /* MyTravelStatusListViewController.swift in Sources */,
 				3F078D4E1E07056400FDE0C9 /* AppDelegate.swift in Sources */,
+				1B829B441E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift in Sources */,
+				1B829B481E1EB4B60023D656 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
