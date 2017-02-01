@@ -17,6 +17,8 @@
 		1B8223261E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223251E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift */; };
 		1B8223281E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223271E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift */; };
 		1B82232B1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82232A1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift */; };
+		1B82232D1E425E1D0033C76D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82232C1E425E1D0033C76D /* FavoritesViewController.swift */; };
+		1B82232F1E425E2C0033C76D /* AddFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82232E1E425E2C0033C76D /* AddFavoriteViewController.swift */; };
 		1B829B401E1EACCF0023D656 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B3F1E1EACCF0023D656 /* Inspectable.swift */; };
 		1B829B421E1EB2B10023D656 /* MyTravelStatusListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */; };
 		1B829B441E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */; };
@@ -45,6 +47,8 @@
 		1B8223251E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativeDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
 		1B8223271E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		1B82232A1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativeDetailsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		1B82232C1E425E1D0033C76D /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B82232E1E425E2C0033C76D /* AddFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavoriteViewController.swift; sourceTree = SOURCE_ROOT; };
 		1B829B3F1E1EACCF0023D656 /* Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
 		1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusListViewController.swift; path = "DB Travel Assistance/MyTravelStatusListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusDetailsViewController.swift; path = "DB Travel Assistance/MyTravelStatusDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -184,6 +188,8 @@
 		3F89B5401E070A7800108FD8 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				1B82232C1E425E1D0033C76D /* FavoritesViewController.swift */,
+				1B82232E1E425E2C0033C76D /* AddFavoriteViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				1B829B421E1EB2B10023D656 /* MyTravelStatusListViewController.swift in Sources */,
 				3F078D4E1E07056400FDE0C9 /* AppDelegate.swift in Sources */,
 				1B8223241E4251A00033C76D /* RoutePlanerAlternativesViewController.swift in Sources */,
+				1B82232D1E425E1D0033C76D /* FavoritesViewController.swift in Sources */,
 				1B829B441E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift in Sources */,
 				1B82231B1E4245EA0033C76D /* MyTravelLegendViewController.swift in Sources */,
 				1B8223221E424E250033C76D /* RoutePlanerOverviewViewController.swift in Sources */,
@@ -370,6 +377,7 @@
 				1B8223201E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift in Sources */,
 				1B8223171E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift in Sources */,
 				1B8223151E4240A90033C76D /* StatusListTableViewCell.swift in Sources */,
+				1B82232F1E425E2C0033C76D /* AddFavoriteViewController.swift in Sources */,
 				1B8223281E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

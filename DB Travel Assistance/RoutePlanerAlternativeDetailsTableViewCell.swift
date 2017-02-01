@@ -10,6 +10,19 @@ import UIKit
 
 class RoutePlanerAlternativeDetailsTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet var stationMachine: UIImageView!
+    
+    
+    @IBOutlet var sourceTime: UILabel!
+    @IBOutlet var sourceLocation: UILabel!
+    
+    @IBOutlet var station: UILabel!
+    
+    @IBOutlet var destinationTime: UILabel!
+    @IBOutlet var destinationLocation: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
