@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSForegroundColorAttributeName: UIColor.white,
         ]
         
+        DBAPIRequester.sharedRequester.testAPICall()
+        
         return true
     }
 
