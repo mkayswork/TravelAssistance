@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -73,6 +73,12 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crQ-x7-iiT">
@@ -87,7 +93,16 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="1sb-Sl-J4d" kind="show" id="Dro-xp-ZDO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC7-3v-8vw">
                                 <rect key="frame" x="60" y="490" width="200" height="20"/>
@@ -103,7 +118,6 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <segue destination="SNV-EJ-rxB" kind="show" id="Vqn-aw-OIu"/>
-                        <segue destination="1sb-Sl-J4d" kind="show" id="cH5-fk-bdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -140,16 +154,18 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="73u-E1-fMS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="73u-E1-fMS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="65" id="JFB-Et-1wR">
                                         <rect key="frame" x="0.0" y="28" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JFB-Et-1wR" id="bhu-nB-VML">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="von:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMq-xg-6Kq">
@@ -281,7 +297,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="jI0-6j-LYI">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eAA-gg-CWo">
+                        <barButtonItem key="leftBarButtonItem" image="Cross" id="eAA-gg-CWo">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9Ux-wJ-lGH">
@@ -294,10 +310,10 @@
             </objects>
             <point key="canvasLocation" x="4089.375" y="1125"/>
         </scene>
-        <!--View Controller-->
+        <!--Route Planer Overview View Controller-->
         <scene sceneID="Vy1-CW-KpX">
             <objects>
-                <viewController id="45L-Cw-v4x" sceneMemberID="viewController">
+                <viewController id="45L-Cw-v4x" customClass="RoutePlanerOverviewViewController" customModule="DB_Travel_Assistance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qgE-T4-nO4"/>
                         <viewControllerLayoutGuide type="bottom" id="GfI-JT-DQK"/>
@@ -309,6 +325,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L2E-xz-Q1E">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="45L-Cw-v4x" id="IeA-Kn-O5d"/>
+                                </connections>
                             </mapView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUp-e2-PZc">
                                 <rect key="frame" x="0.0" y="181" width="320" height="274"/>
@@ -330,7 +349,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ead-dy-ojt">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ead-dy-ojt">
                                         <rect key="frame" x="60" y="173" width="200" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -338,8 +357,11 @@
                                         <state key="normal" title="wenig Umstieg">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="showAlternativeRouteButtonTapped:" destination="45L-Cw-v4x" eventType="touchUpInside" id="Keg-Qj-qPP"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="981-hu-L2x">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="981-hu-L2x">
                                         <rect key="frame" x="60" y="123" width="200" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -363,17 +385,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ir1-To-7Ql"/>
                     <connections>
-                        <segue destination="4ad-ia-JgU" kind="show" id="wnQ-W9-ATB"/>
+                        <outlet property="buttonContainer" destination="gUp-e2-PZc" id="Tlq-ht-w95"/>
+                        <outlet property="everythinOkayLabel" destination="9Gl-Gx-fNU" id="I6Y-Qy-IUm"/>
+                        <outlet property="mapView" destination="L2E-xz-Q1E" id="phl-z4-8Kn"/>
+                        <segue destination="4ad-ia-JgU" kind="show" identifier="toAlternativeRoutes" id="wnQ-W9-ATB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGT-2o-cyn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3382.5" y="460.56338028169017"/>
         </scene>
-        <!--View Controller-->
+        <!--Route Planer Alternatives View Controller-->
         <scene sceneID="ATO-cK-EgG">
             <objects>
-                <viewController id="4ad-ia-JgU" sceneMemberID="viewController">
+                <viewController id="4ad-ia-JgU" customClass="RoutePlanerAlternativesViewController" customModule="DB_Travel_Assistance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oFT-mX-wDv"/>
                         <viewControllerLayoutGuide type="bottom" id="BE9-e7-HFJ"/>
@@ -411,19 +436,15 @@
                                 <color key="separatorColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="65" id="9wa-oE-vpv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="65" id="9wa-oE-vpv" customClass="RoutePlanerAlternativeTableViewCell" customModule="DB_Travel_Assistance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="310" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9wa-oE-vpv" id="pdo-WS-pSD">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhJ-YM-uxf">
                                                     <rect key="frame" x="8" y="31" width="25" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moreInfoArrow" translatesAutoresizingMaskIntoConstraints="NO" id="4IE-b5-Jsc">
-                                                    <rect key="frame" x="277" y="20" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 Min, von Haltestelle X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8u-8w-XsU">
@@ -453,10 +474,31 @@
                                                     <rect key="frame" x="173" y="31" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6T-LF-WmV">
+                                                    <rect key="frame" x="277" y="20" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="moreInfoArrow"/>
+                                                    <connections>
+                                                        <action selector="showDetailsTapped:" destination="9wa-oE-vpv" eventType="touchUpInside" id="8tj-5Y-BQc"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fifthImage" destination="G9g-xz-JUG" id="Drd-Am-QdP"/>
+                                            <outlet property="firstImage" destination="fhJ-YM-uxf" id="WeV-gp-8qy"/>
+                                            <outlet property="fourthImage" destination="P6s-YQ-YXY" id="Rrn-nk-dR2"/>
+                                            <outlet property="secondImage" destination="J8q-bQ-FpJ" id="wXD-M8-Icg"/>
+                                            <outlet property="sixthImage" destination="nH1-b1-Etj" id="An4-bc-cHe"/>
+                                            <outlet property="thirdImage" destination="Rz1-np-el8" id="pJA-SS-AYZ"/>
+                                            <outlet property="timeFromSourceDestination" destination="l8u-8w-XsU" id="lcH-2a-AKU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4ad-ia-JgU" id="FBi-wv-I51"/>
+                                    <outlet property="delegate" destination="4ad-ia-JgU" id="h9D-oa-NCL"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empfohlen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-bB-O8k">
                                 <rect key="frame" x="5" y="60" width="310" height="21"/>
@@ -468,19 +510,26 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Y1-QP-AS0"/>
+                    <navigationItem key="navigationItem" id="xho-K0-1ie">
+                        <barButtonItem key="leftBarButtonItem" image="backArrow" id="xpM-d6-kg0">
+                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="4ad-ia-JgU" id="qIc-V0-ZOp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="Pxs-L6-xPB" kind="show" id="pbQ-SO-ZnP"/>
+                        <segue destination="Pxs-L6-xPB" kind="show" identifier="toAlternativeDetails" id="pbQ-SO-ZnP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0L-KZ-PLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4087.5" y="460.56338028169017"/>
         </scene>
-        <!--View Controller-->
+        <!--Route Planer Alternative Details View Controller-->
         <scene sceneID="GSv-Qh-7Lj">
             <objects>
-                <viewController id="Pxs-L6-xPB" sceneMemberID="viewController">
+                <viewController id="Pxs-L6-xPB" customClass="RoutePlanerAlternativeDetailsViewController" customModule="DB_Travel_Assistance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iZm-FV-4tm"/>
                         <viewControllerLayoutGuide type="bottom" id="BhH-wO-maJ"/>
@@ -496,11 +545,11 @@
                                 <color key="separatorColor" red="0.31372549019607843" green="0.31372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="100" id="XIN-Cr-JKp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="100" id="XIN-Cr-JKp" customClass="RoutePlanerAlternativeDetailsTableViewCell" customModule="DB_Travel_Assistance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XIN-Cr-JKp" id="wbg-bA-DLG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="23:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EW-zz-2F7">
@@ -545,11 +594,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WaitCell" id="6TD-90-5hc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WaitCell" id="6TD-90-5hc" customClass="MyTravelNoMessagesTableViewCell" customModule="DB_Travel_Assistance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="128" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6TD-90-5hc" id="0CY-ND-5P5">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Umstieg, 7 Minuten" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpC-lJ-qvV">
@@ -564,10 +613,19 @@
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pxs-L6-xPB" id="Hms-Y0-pcR"/>
+                                    <outlet property="delegate" destination="Pxs-L6-xPB" id="d0p-WD-x78"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ggE-5Q-bm6">
+                        <barButtonItem key="leftBarButtonItem" image="backArrow" id="poV-hf-7uQ">
+                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfN-gP-Kfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,59 +653,58 @@
             </objects>
             <point key="canvasLocation" x="1526" y="904"/>
         </scene>
-        <!--View Controller-->
+        <!--My Travel Legend View Controller-->
         <scene sceneID="us4-Bf-M4u">
             <objects>
-                <viewController id="89a-L8-OlU" sceneMemberID="viewController">
+                <viewController id="89a-L8-OlU" customClass="MyTravelLegendViewController" customModule="DB_Travel_Assistance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eOa-T9-aKf"/>
                         <viewControllerLayoutGuide type="bottom" id="8mn-jd-IqB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bQU-hp-jj1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legende" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hht-yu-dg8">
-                                <rect key="frame" x="16" y="20" width="288" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DBSansComp-Bold" family="DB Sans Comp" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XjS-mX-QHh">
+                        <barButtonItem key="leftBarButtonItem" image="Cross" id="nup-ts-QQS">
+                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="89a-L8-OlU" id="GNC-2S-lbT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ni4-Ys-cv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2603" y="-890"/>
+            <point key="canvasLocation" x="3000" y="-949"/>
         </scene>
-        <!--View Controller-->
+        <!--My Travel Choose Train Ride View Controller-->
         <scene sceneID="FYB-Vt-Mlg">
             <objects>
-                <viewController id="Mua-KZ-H5J" sceneMemberID="viewController">
+                <viewController id="Mua-KZ-H5J" customClass="MyTravelChooseTrainRideViewController" customModule="DB_Travel_Assistance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hQ8-6h-FTs"/>
                         <viewControllerLayoutGuide type="bottom" id="KoE-ds-cvG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jtV-Z5-gNS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="een-zh-oRX">
-                                <rect key="frame" x="0.0" y="79" width="320" height="489"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="65" id="i7l-NN-h5C">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="65" id="i7l-NN-h5C" customClass="MyTravelChooseTrainRideTableViewCell" customModule="DB_Travel_Assistance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i7l-NN-h5C" id="VcC-Zg-hVj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="von:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMq-DS-bOR">
@@ -681,24 +738,36 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="destinationLocation" destination="F4c-eu-aVT" id="LHF-ne-Tu3"/>
+                                            <outlet property="sourceLocation" destination="kbt-wG-X2b" id="zRO-8U-dDg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mua-KZ-H5J" id="KfT-14-a71"/>
+                                    <outlet property="delegate" destination="Mua-KZ-H5J" id="PIl-Up-XIL"/>
+                                </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fahrt für Benachrichtigungen auswählen:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sv-0B-akF">
-                                <rect key="frame" x="5" y="50" width="310" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DBSansComp-Bold" family="DB Sans Comp" pointSize="16"/>
-                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sAk-s0-P0T">
+                        <barButtonItem key="leftBarButtonItem" image="Cross" id="KTi-uS-wjM">
+                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Mua-KZ-H5J" id="13g-k2-L43"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="tableView" destination="een-zh-oRX" id="xq2-hN-f8z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWG-Xe-ExD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3382.5" y="-890.49295774647885"/>
+            <point key="canvasLocation" x="5501.25" y="-904.22535211267609"/>
         </scene>
         <!--Statusmeldungen-->
         <scene sceneID="nje-RO-LhM">
@@ -788,14 +857,14 @@ def</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94509803921568625" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="statusCategory" destination="M2A-pw-A6b" id="ARX-1F-duS"/>
+                                            <outlet property="statusCategory" destination="M2A-pw-A6b" id="xnP-0v-W0C"/>
                                             <outlet property="statusImage" destination="YhW-o7-2He" id="TfK-M9-XX6"/>
                                             <outlet property="statusMessage" destination="lkt-BS-vt9" id="yxd-xJ-H2V"/>
                                             <outlet property="statusNotice" destination="qap-s3-jBl" id="fWQ-l2-FA9"/>
                                             <outlet property="statusTime" destination="w5c-C7-LWN" id="DJR-KH-ewx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NothingCell" rowHeight="44" id="EmR-NN-B16" customClass="MyTravelStatusTableViewCell" customModule="DB_Travel_Assistance" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NothingCell" rowHeight="44" id="EmR-NN-B16" customClass="MyTravelNoMessagesTableViewCell" customModule="DB_Travel_Assistance" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EmR-NN-B16" id="gNi-F5-YAW">
@@ -812,6 +881,9 @@ def</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="infoMessage" destination="uaq-1a-rd4" id="GMk-ox-UdG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -826,17 +898,15 @@ def</string>
                         <barButtonItem key="leftBarButtonItem" image="navInfo" id="6Wv-JH-eYV">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="89a-L8-OlU" kind="popoverPresentation" popoverAnchorBarButtonItem="6Wv-JH-eYV" id="g6p-Uy-cRQ">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="legendButtonTapped:" destination="fNV-PI-3c0" id="g2m-WP-TaJ"/>
+                                <segue destination="wae-hm-ced" kind="presentation" modalPresentationStyle="pageSheet" id="g6p-Uy-cRQ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="Assistant" id="ynh-kI-Kq4">
                             <color key="tintColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                             <connections>
-                                <segue destination="Mua-KZ-H5J" kind="popoverPresentation" popoverAnchorBarButtonItem="ynh-kI-Kq4" id="Ujp-co-fmc">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <action selector="travelAssitanceButtonTapped:" destination="fNV-PI-3c0" id="XTq-89-vwQ"/>
+                                <segue destination="xp9-iy-Beb" kind="presentation" modalPresentationStyle="pageSheet" id="Ujp-co-fmc"/>
                             </connections>
                         </barButtonItem>
                         <userDefinedRuntimeAttributes>
@@ -846,6 +916,7 @@ def</string>
                         </userDefinedRuntimeAttributes>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="jQe-W1-P0x" id="nrT-bc-wsg"/>
                         <segue destination="htu-Nc-FuE" kind="show" identifier="toStatusDetail" id="gs5-PC-8hH"/>
                     </connections>
                 </viewController>
@@ -895,7 +966,7 @@ def</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="DBSansComp-Regular" family="DB Sans Comp" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -929,6 +1000,7 @@ def</string>
                         <outlet property="categoryImage" destination="6b9-ka-XRw" id="vOi-oN-FnW"/>
                         <outlet property="categoryLabel" destination="B3v-zg-vd3" id="i13-Gh-maA"/>
                         <outlet property="messageLabel" destination="x0u-fM-9rC" id="der-q9-0Kf"/>
+                        <outlet property="messageText" destination="7l6-6n-NwX" id="enu-Sm-Zwz"/>
                         <outlet property="statusCreationLabel" destination="H33-44-PCx" id="bMH-Fo-Wyj"/>
                     </connections>
                 </viewController>
@@ -1020,6 +1092,44 @@ def</string>
             </objects>
             <point key="canvasLocation" x="2602.5" y="460.56338028169017"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jta-n8-x6o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wae-hm-ced" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="88c-4f-Tpv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98431372549999996" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="89a-L8-OlU" kind="relationship" relationship="rootViewController" id="7Ba-GP-YDO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUs-xU-jI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2323" y="-940"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H8v-XU-xz5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xp9-iy-Beb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gGI-7Z-R7u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.98431372549999996" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mua-KZ-H5J" kind="relationship" relationship="rootViewController" id="VCg-Au-eNx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dQ-HV-rmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4503.75" y="-904.22535211267609"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Assistant" width="25" height="25"/>
@@ -1029,6 +1139,7 @@ def</string>
         <image name="Info" width="52" height="52"/>
         <image name="MeineFahrt" width="25" height="25"/>
         <image name="Routenplaner" width="25" height="25"/>
+        <image name="backArrow" width="25" height="25"/>
         <image name="moreInfoArrow" width="48" height="48"/>
         <image name="navInfo" width="24" height="24"/>
     </resources>

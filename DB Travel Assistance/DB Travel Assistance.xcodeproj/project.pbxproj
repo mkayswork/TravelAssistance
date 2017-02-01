@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8223151E4240A90033C76D /* StatusListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223141E4240A90033C76D /* StatusListTableViewCell.swift */; };
+		1B8223171E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223161E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift */; };
+		1B82231B1E4245EA0033C76D /* MyTravelLegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82231A1E4245EA0033C76D /* MyTravelLegendViewController.swift */; };
+		1B82231D1E42461F0033C76D /* MyTravelChooseTrainRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82231C1E42461F0033C76D /* MyTravelChooseTrainRideViewController.swift */; };
+		1B8223201E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82231F1E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift */; };
+		1B8223221E424E250033C76D /* RoutePlanerOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223211E424E250033C76D /* RoutePlanerOverviewViewController.swift */; };
+		1B8223241E4251A00033C76D /* RoutePlanerAlternativesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223231E4251A00033C76D /* RoutePlanerAlternativesViewController.swift */; };
+		1B8223261E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223251E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift */; };
+		1B8223281E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8223271E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift */; };
+		1B82232B1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B82232A1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift */; };
 		1B829B401E1EACCF0023D656 /* Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B3F1E1EACCF0023D656 /* Inspectable.swift */; };
 		1B829B421E1EB2B10023D656 /* MyTravelStatusListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */; };
 		1B829B441E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */; };
@@ -25,6 +35,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B8223141E4240A90033C76D /* StatusListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusListTableViewCell.swift; sourceTree = "<group>"; };
+		1B8223161E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelNoMessagesTableViewCell.swift; path = "DB Travel Assistance/MyTravelNoMessagesTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		1B82231A1E4245EA0033C76D /* MyTravelLegendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelLegendViewController.swift; path = "DB Travel Assistance/MyTravelLegendViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1B82231C1E42461F0033C76D /* MyTravelChooseTrainRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelChooseTrainRideViewController.swift; path = "DB Travel Assistance/MyTravelChooseTrainRideViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1B82231F1E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTravelChooseTrainRideTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		1B8223211E424E250033C76D /* RoutePlanerOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerOverviewViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B8223231E4251A00033C76D /* RoutePlanerAlternativesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativesViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B8223251E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativeDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
+		1B8223271E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		1B82232A1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutePlanerAlternativeDetailsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		1B829B3F1E1EACCF0023D656 /* Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspectable.swift; sourceTree = "<group>"; };
 		1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusListViewController.swift; path = "DB Travel Assistance/MyTravelStatusListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTravelStatusDetailsViewController.swift; path = "DB Travel Assistance/MyTravelStatusDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -67,6 +87,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		1B8223131E4240870033C76D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B8223141E4240A90033C76D /* StatusListTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1B82231E1E4248D90033C76D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B8223161E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift */,
+				1B829B451E1EB3360023D656 /* MyTravelStatusTableViewCell.swift */,
+				1B82231F1E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		1B8223291E42547B0033C76D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1B8223271E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift */,
+				1B82232A1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		2DB7B7D22402CA34EE4CD754 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +143,7 @@
 		3F078D4C1E07056400FDE0C9 /* DB Travel Assistance */ = {
 			isa = PBXGroup;
 			children = (
+				1B8223131E4240870033C76D /* Cells */,
 				3F89B5431E070ABE00108FD8 /* Helpers */,
 				3F078D4D1E07056400FDE0C9 /* AppDelegate.swift */,
 				3F89B53E1E070A6400108FD8 /* MyTravel */,
@@ -117,9 +165,11 @@
 		3F89B53E1E070A6400108FD8 /* MyTravel */ = {
 			isa = PBXGroup;
 			children = (
+				1B82231E1E4248D90033C76D /* Cells */,
 				1B829B411E1EB2B10023D656 /* MyTravelStatusListViewController.swift */,
 				1B829B431E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift */,
-				1B829B451E1EB3360023D656 /* MyTravelStatusTableViewCell.swift */,
+				1B82231A1E4245EA0033C76D /* MyTravelLegendViewController.swift */,
+				1B82231C1E42461F0033C76D /* MyTravelChooseTrainRideViewController.swift */,
 			);
 			path = MyTravel;
 			sourceTree = "<group>";
@@ -141,6 +191,10 @@
 		3F89B5411E070A7D00108FD8 /* RoutePlaner */ = {
 			isa = PBXGroup;
 			children = (
+				1B8223291E42547B0033C76D /* Cells */,
+				1B8223211E424E250033C76D /* RoutePlanerOverviewViewController.swift */,
+				1B8223231E4251A00033C76D /* RoutePlanerAlternativesViewController.swift */,
+				1B8223251E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift */,
 			);
 			path = RoutePlaner;
 			sourceTree = "<group>";
@@ -300,13 +354,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F078D501E07056400FDE0C9 /* ViewController.swift in Sources */,
+				1B8223261E4251BB0033C76D /* RoutePlanerAlternativeDetailsViewController.swift in Sources */,
 				3F89B5451E070AD000108FD8 /* IBInspectable.swift in Sources */,
 				1B829B401E1EACCF0023D656 /* Inspectable.swift in Sources */,
+				1B82232B1E4259F90033C76D /* RoutePlanerAlternativeDetailsTableViewCell.swift in Sources */,
 				1B829B461E1EB3360023D656 /* MyTravelStatusTableViewCell.swift in Sources */,
+				1B82231D1E42461F0033C76D /* MyTravelChooseTrainRideViewController.swift in Sources */,
 				1B829B421E1EB2B10023D656 /* MyTravelStatusListViewController.swift in Sources */,
 				3F078D4E1E07056400FDE0C9 /* AppDelegate.swift in Sources */,
+				1B8223241E4251A00033C76D /* RoutePlanerAlternativesViewController.swift in Sources */,
 				1B829B441E1EB2C50023D656 /* MyTravelStatusDetailsViewController.swift in Sources */,
+				1B82231B1E4245EA0033C76D /* MyTravelLegendViewController.swift in Sources */,
+				1B8223221E424E250033C76D /* RoutePlanerOverviewViewController.swift in Sources */,
 				1B829B481E1EB4B60023D656 /* Constants.swift in Sources */,
+				1B8223201E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift in Sources */,
+				1B8223171E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift in Sources */,
+				1B8223151E4240A90033C76D /* StatusListTableViewCell.swift in Sources */,
+				1B8223281E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

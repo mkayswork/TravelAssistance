@@ -10,6 +10,9 @@ import UIKit
 
 class MyTravelStatusListViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     // Meldungen der jetzigen Fahrt anzapfen
     var selectedRow: Int?
     
@@ -37,6 +40,12 @@ class MyTravelStatusListViewController: UIViewController {
             // destinationViewController.DS = DSListe[selectedRow]
             //
         }
+    }
+    
+    @IBAction func legendButtonTapped(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func travelAssitanceButtonTapped(_ sender: UIBarButtonItem) {
     }
     
 }

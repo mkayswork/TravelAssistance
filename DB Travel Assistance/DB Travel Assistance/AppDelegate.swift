@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
         
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSFontAttributeName: UIFont(name: "DB Sans Comp", size: 19)!,
+            NSForegroundColorAttributeName: UIColor.white,
+        ]
+        
         return true
     }
 

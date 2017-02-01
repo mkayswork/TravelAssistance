@@ -19,8 +19,7 @@ class MyTravelStatusTableViewCell: UITableViewCell {
     @IBOutlet weak var statusCategory: UILabel!
     @IBOutlet weak var statusNotice: UILabel!
     @IBOutlet weak var statusMessage: UILabel!
-    
-    
+
     var row: Int!
     var delegate: MyTravelStatusCellDelegate?
     

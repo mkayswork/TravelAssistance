@@ -31,13 +31,13 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderWidth : Int {
+    @IBInspectable var borderWidth : CGFloat {
         
         get {
             return self.borderWidth
         }
         set {
-            self.borderWidth = newValue
+            self.layer.borderWidth = newValue
         }
     }
 }

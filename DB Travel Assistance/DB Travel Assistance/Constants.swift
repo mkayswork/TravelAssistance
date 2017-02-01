@@ -16,3 +16,9 @@ struct Constants {
         return UIFont(name: "DB Sans Comp", size: 20)!
     }
 }
+
+enum AlternativeType{
+    case Cheapest
+    case Fastest
+    case MinimumChanges
+}

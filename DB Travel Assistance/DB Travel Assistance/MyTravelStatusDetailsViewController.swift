@@ -14,10 +14,14 @@ class MyTravelStatusDetailsViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var statusCreationLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var messageText: UIScrollView!
+    @IBOutlet weak var messageText: UITextView!
+    
     
     var statusMeldung: AnyObject?
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Properties auffüllen
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +40,10 @@ class MyTravelStatusDetailsViewController: UIViewController {
     }
 
     func configureView(){
-        self.navigationItem.titleFont = Constants.titleFont()
+
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
-        _ = self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }
