@@ -5,5 +5,5 @@ use_frameworks!
 target 'DB Travel Assistance' do
 
   pod 'Alamofire', '~> 4.0'
-  
+  pod 'SwiftyJSON'
 end
