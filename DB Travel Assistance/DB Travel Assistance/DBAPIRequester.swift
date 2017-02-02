@@ -7,7 +7,11 @@
 //
 
 private let baseAPIURLString:String = "https://open-api.bahn.de/bin/rest.exe/"
-private let departureBoard:String = "departureBoard"
+
+private let departureBoardURLString = "departureBoard"
+private let arrivalBoardURLString = "arrivalBoard"
+private let stationSearchURLString = "location.name"
+
 private let jsonFormat:String = "json"
 private let language:String = "de"
 
@@ -17,22 +21,70 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+typealias RequestFinishedCompletion = (_ data: Data?, _ error: Error?) -> Void
+
 public class DBAPIRequester {
     static let sharedRequester = DBAPIRequester()
     private init(){}
-    //https://open-api.bahn.de/bin/rest.exe/departureBoard?format=json&lang=de&id=008000105&date=2017-01-02&time=20%3A14&authKey=TestDemoAPI16
-    //https://open-api.bahn.de/bin/rest.exe/departureBoard?date=2017-01-02&format=json&id=008000105&lang=de&time=20%3A14
     
-    func testAPICall() {
+    /// standard
+    private var standardParameters: Parameters = ["format": jsonFormat,"lang": language, "authKey": apiKey]
+    
+    func searchForStationWithName(name: String, completion: RequestFinishedCompletion) {
         
-        let parameters: Parameters = ["format": jsonFormat,"lang": language,"id": "008000105","date": "2017-01-02","time": "20:14", "authKey": apiKey]
+        let parameters: Parameters = ["input" : name]
+        let finalParameters = prepareParameters(parameters: parameters)
+        let finalURLString = baseAPIURLString + stationSearchURLString
         
-        Alamofire.request(baseAPIURLString + departureBoard, parameters: parameters, encoding: URLEncoding.default).responseJSON { (response) in
+        makeAPICallWithURLString(urlString: finalURLString, parameters: finalParameters)
+    }
+    
+    func searchForArrivalBoardWithStationId(id: String){
+        let parameters: Parameters = ["id": "008000105"]
+        let finalParameters = prepareParameters(parameters: parameters)
+        let finalURLString = baseAPIURLString + arrivalBoardURLString
+        
+        makeAPICallWithURLString(urlString: finalURLString, parameters: finalParameters)
+    }
+    
+    func testCall(){
+        let parameters: Parameters = ["id": "008000105","date": "2017-01-02","time": "20:14"]
+        let finalParameters = prepareParameters(parameters: parameters)
+        let finalURLString = baseAPIURLString + departureBoardURLString
+        
+        makeAPICallWithURLString(urlString: finalURLString, parameters: finalParameters)
+    }
+    
+    
+    // call DB APi with finalized parameters
+    private func makeAPICallWithURLString(urlString: String, parameters: Parameters? = nil){
+        
+        Alamofire.request(urlString, parameters: parameters, encoding: URLEncoding.default).responseJSON { (response) in
             
             let json = JSON(data: response.data!)
             print(json)
-            
         }
     }
+    
+    // IMPORTANT NOTICE: WHEN RECEIVING A SERIES CALL FROM RESPONSE.DATA, DELETE THE BACKSLASHES!!!
+    
+    func makeAPISeriesCallWithURLString(urlString: String){
+        makeAPICallWithURLString(urlString: urlString, parameters: nil)
+    }
+    
+    // Add specified parameters to standard parameters
+    private func prepareParameters(parameters: Parameters) -> Parameters{
+        
+        var finalParameters = standardParameters
+        
+        for param in parameters {
+            finalParameters[param.key] = param.value
+        }
+        
+        return finalParameters
+    }
+    
+
+    
     
 }
