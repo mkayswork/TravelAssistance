@@ -21,58 +21,97 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-typealias RequestFinishedCompletion = (_ data: Data?, _ error: Error?) -> Void
+typealias RequestFinishedCompletion = (_ json: JSON?, _ error: Error?) -> Void
 
 public class DBAPIRequester {
     static let sharedRequester = DBAPIRequester()
     private init(){}
     
-    /// standard
-    private var standardParameters: Parameters = ["format": jsonFormat,"lang": language, "authKey": apiKey]
+    /// standardParameters
     
-    func searchForStationWithName(name: String, completion: RequestFinishedCompletion) {
+/// MARK: ********** properties **********
+    private var standardParameters: Parameters = ["format": jsonFormat,"lang": language, "authKey": apiKey]
+
+/// MARK: ********** apiCalls **********
+    func searchForStationWithName(name: String, completion: @escaping RequestFinishedCompletion) {
         
         let parameters: Parameters = ["input" : name]
         let finalParameters = prepareParameters(parameters: parameters)
         let finalURLString = baseAPIURLString + stationSearchURLString
         
-        makeAPICallWithURLString(urlString: finalURLString, parameters: finalParameters)
+        makeAPICallWithURLString(urlString:  finalURLString, parameters: finalParameters) { (json, error) in
+            if json != nil {
+                completion(json, nil)
+            }
+            if error != nil {
+                completion(nil, error)
+            }
+        }
     }
     
-    func searchForArrivalBoardWithStationId(id: String){
+    func searchForArrivalBoardWithStationId(id: String, completion: @escaping RequestFinishedCompletion){
         let parameters: Parameters = ["id": "008000105"]
         let finalParameters = prepareParameters(parameters: parameters)
         let finalURLString = baseAPIURLString + arrivalBoardURLString
         
-        makeAPICallWithURLString(urlString: finalURLString, parameters: finalParameters)
-    }
-    
-    func testCall(){
-        let parameters: Parameters = ["id": "008000105","date": "2017-01-02","time": "20:14"]
-        let finalParameters = prepareParameters(parameters: parameters)
-        let finalURLString = baseAPIURLString + departureBoardURLString
-        
-        makeAPICallWithURLString(urlString: finalURLString, parameters: finalParameters)
-    }
-    
-    
-    // call DB APi with finalized parameters
-    private func makeAPICallWithURLString(urlString: String, parameters: Parameters? = nil){
-        
-        Alamofire.request(urlString, parameters: parameters, encoding: URLEncoding.default).responseJSON { (response) in
-            
-            let json = JSON(data: response.data!)
-            print(json)
+        makeAPICallWithURLString(urlString:  finalURLString, parameters: finalParameters) { (json, error) in
+            if json != nil {
+                completion(json, nil)
+            }
+            if error != nil {
+                completion(nil, error)
+            }
         }
     }
     
-    // IMPORTANT NOTICE: WHEN RECEIVING A SERIES CALL FROM RESPONSE.DATA, DELETE THE BACKSLASHES!!!
-    
-    func makeAPISeriesCallWithURLString(urlString: String){
-        makeAPICallWithURLString(urlString: urlString, parameters: nil)
+    func searchForDepartureBoardWithStationId(id: String, completion: @escaping RequestFinishedCompletion){
+        let parameters: Parameters = ["id": "008000105"]
+        let finalParameters = prepareParameters(parameters: parameters)
+        let finalURLString = baseAPIURLString + departureBoardURLString
+        
+        makeAPICallWithURLString(urlString:  finalURLString, parameters: finalParameters) { (json, error) in
+            if json != nil {
+                completion(json, nil)
+            }
+            if error != nil {
+                completion(nil, error)
+            }
+        }
+        
     }
     
+
+    // IMPORTANT NOTICE: WHEN RECEIVING A SERIES CALL FROM RESPONSE.DATA, DELETE THE BACKSLASHES!!!
+    
+    func makeAPISeriesCallWithURLString(urlString: String, completion: @escaping RequestFinishedCompletion){
+        
+        makeAPICallWithURLString(urlString: urlString) { (json, error) in
+            if json != nil {
+                completion(json, nil)
+            }
+            if error != nil {
+                completion(nil, error)
+            }
+        }
+    }
+    
+/// MARK: ********** privateMethods **********
     // Add specified parameters to standard parameters
+    // call DB APi with finalized parameters
+    private func makeAPICallWithURLString(urlString: String, parameters: Parameters? = nil, completion: @escaping RequestFinishedCompletion){
+        
+        Alamofire.request(urlString, parameters: parameters, encoding: URLEncoding.default).responseJSON { (response) in
+            
+            if response.error != nil {
+                completion(nil,response.error)
+            } else {
+                let json = JSON(data: response.data!)
+                completion(json,nil)
+            }
+            
+        }
+    }
+    
     private func prepareParameters(parameters: Parameters) -> Parameters{
         
         var finalParameters = standardParameters

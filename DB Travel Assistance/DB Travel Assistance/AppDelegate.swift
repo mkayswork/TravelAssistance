@@ -29,7 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // "https:\/\/open-api.bahn.de\/bin\/rest.exe\/v1.0\/journeyDetail?ref=25512%2F13306%2F199018%2F91005%2F80%3Fdate%3D2017-02-02%26station_evaId%3D8000105%26station_type%3Darr%26authKey%3DTestDemoAPI16%26lang%3Dde%26format%3Djson%26"
         
         
-        DBAPIRequester.sharedRequester.makeAPISeriesCallWithURLString(urlString: "https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=554313%2F186986%2F678946%2F154702%2F80%3Fdate%3D2017-02-02%26station_evaId%3D8000105%26station_type%3Darr%26authKey%3DTestDemoAPI16%26lang%3Dde%26format%3Djson%26")
+        DBAPIRequester.sharedRequester.makeAPISeriesCallWithURLString(urlString: "https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=554313%2F186986%2F678946%2F154702%2F80%3Fdate%3D2017-02-02%26station_evaId%3D8000105%26station_type%3Darr%26authKey%3DTestDemoAPI16%26lang%3Dde%26format%3Djson%26") { (json, error) in
+            
+            if json != nil {
+                print(json!)
+            }
+        }
         
         return true
     }
