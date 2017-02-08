@@ -16,25 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         
         UINavigationBar.appearance().titleTextAttributes = [
             NSFontAttributeName: UIFont(name: "DB Sans Comp", size: 19)!,
             NSForegroundColorAttributeName: UIColor.white,
         ]
-        
-//        DBAPIRequester.sharedRequester.searchForStationWithName(name: "Frankfurt") { (data, error) in
-//            
-//        }
-        // "https:\/\/open-api.bahn.de\/bin\/rest.exe\/v1.0\/journeyDetail?ref=25512%2F13306%2F199018%2F91005%2F80%3Fdate%3D2017-02-02%26station_evaId%3D8000105%26station_type%3Darr%26authKey%3DTestDemoAPI16%26lang%3Dde%26format%3Djson%26"
-        
-        
-        DBAPIRequester.sharedRequester.makeAPISeriesCallWithURLString(urlString: "https://open-api.bahn.de/bin/rest.exe/v1.0/journeyDetail?ref=554313%2F186986%2F678946%2F154702%2F80%3Fdate%3D2017-02-02%26station_evaId%3D8000105%26station_type%3Darr%26authKey%3DTestDemoAPI16%26lang%3Dde%26format%3Djson%26") { (json, error) in
-            
-            if json != nil {
-                print(json!)
-            }
+
+        // initial empty list of StationConnections
+        if UserDefaults.standard.object(forKey: "Favorites") == nil {
+            UserDefaultsHandler.sharedHandler.setInitialStationConnectionsForFirstAppStart()
         }
+        
         
         return true
     }

@@ -50,7 +50,7 @@ public class DBAPIRequester {
     }
     
     func searchForArrivalBoardWithStationId(id: String, completion: @escaping RequestFinishedCompletion){
-        let parameters: Parameters = ["id": "008000105"]
+        let parameters: Parameters = ["id": id]
         let finalParameters = prepareParameters(parameters: parameters)
         let finalURLString = baseAPIURLString + arrivalBoardURLString
         
@@ -65,7 +65,7 @@ public class DBAPIRequester {
     }
     
     func searchForDepartureBoardWithStationId(id: String, completion: @escaping RequestFinishedCompletion){
-        let parameters: Parameters = ["id": "008000105"]
+        let parameters: Parameters = ["id": id]
         let finalParameters = prepareParameters(parameters: parameters)
         let finalURLString = baseAPIURLString + departureBoardURLString
         
@@ -83,7 +83,7 @@ public class DBAPIRequester {
 
     // IMPORTANT NOTICE: WHEN RECEIVING A SERIES CALL FROM RESPONSE.DATA, DELETE THE BACKSLASHES!!!
     
-    func makeAPISeriesCallWithURLString(urlString: String, completion: @escaping RequestFinishedCompletion){
+    private func makeAPISeriesCallWithURLString(urlString: String, completion: @escaping RequestFinishedCompletion){
         
         makeAPICallWithURLString(urlString: urlString) { (json, error) in
             if json != nil {

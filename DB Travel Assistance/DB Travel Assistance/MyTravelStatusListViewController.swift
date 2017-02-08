@@ -11,7 +11,8 @@ import UIKit
 class MyTravelStatusListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    var noMessagesList = [""]
+    //var messages = []
     
     // Meldungen der jetzigen Fahrt anzapfen
     var selectedRow: Int?
@@ -53,6 +54,9 @@ class MyTravelStatusListViewController: UIViewController {
 extension MyTravelStatusListViewController: UITableViewDelegate, UITableViewDataSource, MyTravelStatusCellDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MyTravelStatusTableViewCell
         
         cell.row = indexPath.row
@@ -61,6 +65,7 @@ extension MyTravelStatusListViewController: UITableViewDelegate, UITableViewData
         // --> Fill cell with informatiom
         
         return cell
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
