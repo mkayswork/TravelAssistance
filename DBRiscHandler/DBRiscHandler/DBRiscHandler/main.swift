@@ -8,46 +8,71 @@
 
 import Foundation
 
-print("Hello, World!")
-
-func unzipAllZips(){
+func searchXMLWithWords(keyWords: [String], valueWords: [String]) {
     
-}
-
-func unzipEachFileAt(path: String) {
-    var file: String
+    let fileManager = FileManager.default
+    let xmlParser = XMLDictionaryParser.sharedInstance()
     
-    var subFiles = FileManager.default.subpaths(atPath: path)
+    let path = "/Users/datboi/Desktop/TravelAssistance/DBRiscHandler/DBRiscHandler/dataTest"
+    //let subFiles = fileManager.subpaths(atPath: path)!
+    let enumerator:FileManager.DirectoryEnumerator = fileManager.enumerator(atPath: path)!
+    
+    var relevantDicts = [[String: Any]]()
+    var relevantFiles =  [String]()
     
     
-    for file in subFiles! {
+    // filter for relevant keyWords
+    for file in enumerator {
         
-//        if file.pathExtension == "zip" {
-//                var fullPath = path.stringByAppendingPathComponent(file)
-//        }
-        
+        if (file as AnyObject).hasSuffix(".xml") {
+            
+            xmlParser.nodeNameMode = .always
+            let fileAsDictionary = xmlParser.dictionary(withFile: path + "/" + ((file as AnyObject) as! String) as String)
+            
+            
+            
+            for (key, value) in fileAsDictionary!{
+                
+                
+                for keyWord in keyWords {
+                    if key.contains(keyWord){
+                        relevantDicts.append(fileAsDictionary!)
+                        break
+                    }
+                    if let val = value as? String {
+                        if val.contains(keyWord){
+                            relevantDicts.append(fileAsDictionary!)
+                            relevantFiles.append(path + "/" + ((file as AnyObject) as! String) as String)
+                            
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
     }
-
-}
-
-func doSomething(){
     
-//    var localEmpInvDirContent: [Any]? = try? FileManager.default.contentsOfDirectory(atPath: localDir.localEmpInvDir)
-//    if localEmpInvDirContent?.count {
-//        var transportManager = TransportManager(self.transportCredentials)
-//        var remoteEmpInvDir: String = self.agent.transport.activeProtocol.remoteDir.remoteEmpInvDir
-//        self.transportCredentials.mountedFolder = remoteEmpInvDir
-//        transportManager.openConnection()
-//        for file: String in localEmpInvDirContent {
-//            if (file.pathExtension == "xml") {
-//                DDLogVerbose("[EmpInvUploader] Founded a xml file: %@", file)
-//                // Upload
-//                var pathToRemoteEmpInvDir: String = URL(fileURLWithPath: self.transportCredentials.pathToMountFolder).appendingPathComponent("/").absoluteString
-//                transportManager.copyFile(file.lastPathComponent, from: localDir.localEmpInvDir, to: pathToRemoteEmpInvDir, copyType: "UPLOAD")
-//            }
-//        }
-//    }
+    //    for dic in relevantDicts{
+    //        for (_,value) in dic {
+    //
+    //            valueWords.forEach({valueWord in
+    //
+    //                if let val = value as? String{
+    //                    if val.contains(valueWord){
+    //                        print(dic)
+    //                    }
+    //                }
+    //
+    //            })
+    //        }
+    //    }
 }
+
+let keyWords = ["Anschluss","Freitext","Stoerung","Umleitung","Ausfall"]
+let valueWords = ["Frankfurt", "Koeln"]
+
+searchXMLWithWords(keyWords: keyWords, valueWords: valueWords)
 
 
 
