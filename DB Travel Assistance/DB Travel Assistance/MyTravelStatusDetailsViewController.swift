@@ -17,10 +17,14 @@ class MyTravelStatusDetailsViewController: UIViewController {
     @IBOutlet weak var messageText: UITextView!
     
     
-    var statusMeldung: AnyObject?
+    var statusNotification: StatusNotification!
     
     override func viewWillAppear(_ animated: Bool) {
-        // Properties auffüllen
+        categoryImage.image = UIImage(named: statusNotification.category.rawValue)
+        categoryLabel.text = statusNotification.category.rawValue
+        statusCreationLabel.text = "Erstellt um: " + statusNotification.time
+        messageText.text = statusNotification.messageText
+        messageLabel.text = statusNotification.messageTitle
     }
     
     override func viewDidLoad() {
@@ -44,6 +48,8 @@ class MyTravelStatusDetailsViewController: UIViewController {
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
+    
+    

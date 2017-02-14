@@ -34,8 +34,8 @@ class RoutePlanerOverviewViewController: UIViewController {
     }
     
     func configureView(){
-        //self.everythinOkayLabel.isHidden = true
-        self.buttonContainer.isHidden = true
+
+    
     }
     
     

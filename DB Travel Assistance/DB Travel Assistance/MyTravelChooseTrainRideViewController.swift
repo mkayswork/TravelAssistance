@@ -16,6 +16,7 @@ class MyTravelChooseTrainRideViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var favoriteStatusConnections = UserDefaultsHandler.sharedHandler.getSavedStationsFromDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +47,15 @@ extension MyTravelChooseTrainRideViewController: UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return favoriteStatusConnections.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "Cell") as! MyTravelChooseTrainRideTableViewCell
         
+        let connection = favoriteStatusConnections[indexPath.row]
+        
+        cell.destinationLocation.text = connection.targetDestination.name
+        cell.sourceLocation.text = connection.sourceStation.name
     }
 }

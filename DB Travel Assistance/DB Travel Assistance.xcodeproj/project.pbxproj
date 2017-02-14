@@ -34,10 +34,12 @@
 		3F078D531E07056400FDE0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F078D511E07056400FDE0C9 /* Main.storyboard */; };
 		3F078D551E07056400FDE0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F078D541E07056400FDE0C9 /* Assets.xcassets */; };
 		3F078D581E07056400FDE0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F078D561E07056400FDE0C9 /* LaunchScreen.storyboard */; };
+		3F3CA89D1E53968700D43F14 /* StatusNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3CA89C1E53968700D43F14 /* StatusNotification.swift */; };
 		3F89B5451E070AD000108FD8 /* IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89B5441E070AD000108FD8 /* IBInspectable.swift */; };
 		3F8F0E6A1E0711CE005CE5C4 /* DB Sans Comp Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F0E671E07118E005CE5C4 /* DB Sans Comp Bold.otf */; };
 		3F8F0E6B1E0711D1005CE5C4 /* DB Sans Comp Altern Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F0E681E071197005CE5C4 /* DB Sans Comp Altern Regular Italic.otf */; };
 		3F8F0E6C1E0711D3005CE5C4 /* DB Sans Comp Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F8F0E691E0711A3005CE5C4 /* DB Sans Comp Regular.otf */; };
+		3FF96CCA1E4E74D900D90128 /* PushNotificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF96CC91E4E74D900D90128 /* PushNotificator.swift */; };
 		FF05E762CBACF16EA4595288 /* Pods_DB_Travel_Assistance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4F4982863A6A994B529200 /* Pods_DB_Travel_Assistance.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +75,12 @@
 		3F078D541E07056400FDE0C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F078D571E07056400FDE0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F078D591E07056400FDE0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3CA89C1E53968700D43F14 /* StatusNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusNotification.swift; sourceTree = "<group>"; };
 		3F89B5441E070AD000108FD8 /* IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectable.swift; sourceTree = "<group>"; };
 		3F8F0E671E07118E005CE5C4 /* DB Sans Comp Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DB Sans Comp Bold.otf"; sourceTree = "<group>"; };
 		3F8F0E681E071197005CE5C4 /* DB Sans Comp Altern Regular Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DB Sans Comp Altern Regular Italic.otf"; sourceTree = "<group>"; };
 		3F8F0E691E0711A3005CE5C4 /* DB Sans Comp Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DB Sans Comp Regular.otf"; sourceTree = "<group>"; };
+		3FF96CC91E4E74D900D90128 /* PushNotificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificator.swift; sourceTree = "<group>"; };
 		55E257108DCBFAC46E8E0D03 /* Pods-DB Travel Assistance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DB Travel Assistance.release.xcconfig"; path = "Pods/Target Support Files/Pods-DB Travel Assistance/Pods-DB Travel Assistance.release.xcconfig"; sourceTree = "<group>"; };
 		7B3B4C4C273B0C63AC03EC8A /* Pods-DB Travel Assistance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DB Travel Assistance.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DB Travel Assistance/Pods-DB Travel Assistance.debug.xcconfig"; sourceTree = "<group>"; };
 		9B4F4982863A6A994B529200 /* Pods_DB_Travel_Assistance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DB_Travel_Assistance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,8 @@
 				1B8223311E42650C0033C76D /* DBAPIRequester.swift */,
 				1BD5C2FB1E464902004870ED /* JSONModels.swift */,
 				1B3165781E478ECA00FB0812 /* UserdefaultsHandler.swift */,
+				3FF96CC91E4E74D900D90128 /* PushNotificator.swift */,
+				3F3CA89C1E53968700D43F14 /* StatusNotification.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -406,10 +412,12 @@
 				1B8223221E424E250033C76D /* RoutePlanerOverviewViewController.swift in Sources */,
 				1B3165791E478ECA00FB0812 /* UserdefaultsHandler.swift in Sources */,
 				1B829B481E1EB4B60023D656 /* Constants.swift in Sources */,
+				3F3CA89D1E53968700D43F14 /* StatusNotification.swift in Sources */,
 				1B8223201E4249020033C76D /* MyTravelChooseTrainRideTableViewCell.swift in Sources */,
 				1B8223171E42438A0033C76D /* MyTravelNoMessagesTableViewCell.swift in Sources */,
 				1B8223151E4240A90033C76D /* StatusListTableViewCell.swift in Sources */,
 				1B82232F1E425E2C0033C76D /* AddFavoriteViewController.swift in Sources */,
+				3FF96CCA1E4E74D900D90128 /* PushNotificator.swift in Sources */,
 				1B8223281E42546F0033C76D /* RoutePlanerAlternativeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

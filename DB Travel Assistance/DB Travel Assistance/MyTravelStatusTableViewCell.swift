@@ -8,9 +8,7 @@
 
 import UIKit
 
-protocol MyTravelStatusCellDelegate {
-    func didTapInfoButton(row: Int)
-}
+
 
 class MyTravelStatusTableViewCell: UITableViewCell {
 
@@ -19,9 +17,6 @@ class MyTravelStatusTableViewCell: UITableViewCell {
     @IBOutlet weak var statusCategory: UILabel!
     @IBOutlet weak var statusNotice: UILabel!
     @IBOutlet weak var statusMessage: UILabel!
-
-    var row: Int!
-    var delegate: MyTravelStatusCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,7 +29,4 @@ class MyTravelStatusTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func didTapInfoButton(_ sender: Any) {
-        didTapInfoButton(row)
-    }
 }

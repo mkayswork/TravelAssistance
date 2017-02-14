@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import UserNotifications
+import UserNotificationsUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaultsHandler.sharedHandler.setInitialStationConnectionsForFirstAppStart()
         }
         
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            
+        }
         
         return true
     }
